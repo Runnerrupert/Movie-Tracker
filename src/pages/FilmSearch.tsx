@@ -3,7 +3,7 @@ import { type FormEvent, useState } from 'react';
 import { searchOMDB } from '../api/API';
 import FilmCard from '../components/FilmCard';
 // TODO: Uncomment when Film interface is added
-// import type Film from '../utils/interfaces/Film.interface';
+import type Film from '../utils/interfaces/Film.interface';
 
 const FilmSearch = () => {
   // TODO: Add Film interface to state variable and set initial state obj

@@ -2,7 +2,7 @@ import type React from 'react';
 import { useEffect, useState } from 'react';
 import FilmsAlreadySeen from '../components/FilmsAlreadySeen';
 // TODO: Uncomment when Film interface is added
-// import type Film from '../utils/interfaces/Film.interface';
+import type Film from '../utils/interfaces/Film.interface';
 
 const SeenIt = () => {
   // TODO: Add Film interface to state variable
