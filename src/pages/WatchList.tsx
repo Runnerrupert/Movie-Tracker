@@ -2,11 +2,11 @@ import type React from 'react';
 import { useEffect, useState } from 'react';
 import FilmsToWatchList from '../components/FilmsToWatchList';
 // TODO: Uncomment when Film interface is added
-// import type Film from '../utils/interfaces/Film.interface';
+import type Film from '../utils/interfaces/Film.interface';
 
 const WatchList = () => {
   // TODO: Add Film interface to state variable
-  const [filmsToWatch, setFilmsToWatch] = useState([]);
+  const [filmsToWatch, setFilmsToWatch] = useState<Film>([]);
 
   // TODO: Add correct types to the following parameters
   const removeFromStorage = (
@@ -25,7 +25,7 @@ const WatchList = () => {
         parsedFilmsToWatch = JSON.parse(storedFilmsToWatch);
       }
       parsedFilmsToWatch = parsedFilmsToWatch.filter(
-        (film) => film.Title !== title
+        (film: Film) => film.Title !== title
       );
       setFilmsToWatch(parsedFilmsToWatch);
       localStorage.setItem('filmsToWatch', JSON.stringify(parsedFilmsToWatch));
@@ -37,7 +37,7 @@ const WatchList = () => {
         parsedAlreadySeenFilms = JSON.parse(storedAlreadySeenFilms);
       }
       parsedAlreadySeenFilms = parsedAlreadySeenFilms.filter(
-        (film) => film.Title !== title
+        (film: Film) => film.Title !== title
       );
       localStorage.setItem(
         'alreadySeenFilms',

@@ -2,8 +2,8 @@
 // TODO: Can the properties be marked as readonly?
 
 export default interface Film {
-    readonly title: string;
-    readonly directedBy: string;
+    readonly Title: string;
+    readonly DirectedBy: string;
     readonly starring: string;
     readonly released: string;
     readonly genre: string;
